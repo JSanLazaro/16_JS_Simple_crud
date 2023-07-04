@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="https://github.com/JSanLazaro/16_JS_Simple_crud"
+          >JSanLazaro - Github</a
+        >
+      </div>
+    </nav>
+    <div class="col-md-3"></div>
+    <div class="col-md-6 well">
+      <h3 class="text-primary">ToDo List - First CRUD</h3>
+      <hr class="hr-dotted" />
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <form
+          action="javascript:void(0);"
+          method="POST"
+          class="form-inline"
+          onsubmit="add()"
+        >
+          <label>Nombre:</label>
+          <input type="text" id="form__name" class="form-control" />
+          <button type="submit" class="btn btn-primary form-control">
+            <span class="glyphicon glyphicon-plus"></span> Añadir
+          </button>
+        </form>
+        <br />
+        <div id="edit">
+          <form
+            action="javascript:void(0);"
+            method="POST"
+            class="form-inline"
+            id="update"
+          >
+            <label>Nombre:</label>
+            <input type="text" id="form__edit_name" class="form-control" />
+            <button type="submit" class="btn btn-warning form-control">
+              <span class="glyphicon glyphicon-update"></span> Actualizar
+            </button>
+            <a class="btn btn-danger" onclick="close()" aria-label="Close"
+              >&#10006;</a
+            >
+          </form>
+        </div>
+        <br />
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Edicion</th>
+            </tr>
+          </thead>
+          <tbody id="tbody__name_list"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
